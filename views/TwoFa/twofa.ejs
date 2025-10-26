@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Two-Factor Authentication</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #f3f4f6;
+      padding: 0;
+      margin: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 480px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .logo img {
+      max-height: 50px;
+    }
+    h2 {
+      margin-bottom: 10px;
+      color: #111827;
+      font-size: 24px;
+      text-align: center;
+    }
+    p {
+      font-size: 15px;
+      color: #4b5563;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+    .highlight {
+      color: #111827;
+      font-weight: bold;
+    }
+    .code-display {
+      display: block;
+      text-align: center;
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      color: #ffffff;
+      padding: 14px 24px;
+      font-size: 28px;
+      letter-spacing: 4px;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+      margin: 20px auto;
+      width: fit-content;
+    }
+    .btn {
+      display: inline-block;
+      background: #2563eb;
+      color: #ffffff !important;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 20px auto;
+      display: block;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+    }
+    .security-tips {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #6b7280;
+      border-top: 1px solid #e5e7eb;
+      padding-top: 15px;
+    }
+    .footer-text {
+      margin-top: 15px;
+      font-size: 12px;
+      color: #9ca3af;
+      text-align: center;
+    }
+    @media only screen and (max-width: 480px) {
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+      .code-display {
+        font-size: 22px;
+        padding: 10px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Optional logo -->
+    <!-- <div class="logo">
+      <img src="https://yourdomain.com/logo.png" alt="Your Company Logo">
+    </div> -->
+
+    <h2>🔐 Two-Factor Authentication</h2>
+    <p>Hello, </p>
+    <p>We’ve received a request to verify your identity. For your security, please use the code below to complete the sign-in process.</p>
+
+    <div class="code-display"><%= uuid %></div>
+
+    <!-- <a href="https://yourdomain.com/verify" class="btn">Verify Now</a> -->
+
+    <p>If you didn’t request this verification, please ignore this email or contact our support team immediately.</p>
+
+    <div class="security-tips">
+      <p><strong>Security Tips:</strong></p>
+      <ul style="margin:0; padding-left: 18px;">
+        <li>Never share your code with anyone.</li>
+        <li>Codes expire after 5 minutes.</li>
+        <li>Only enter the code on our official website or app.</li>
+      </ul>
+    </div>
+
+    <p class="footer-text">
+      This is an automated email — please do not reply.  
+      <!-- For help, visit <a href="https://yourdomain.com/support" style="color:#2563eb;">Support</a>. -->
+    </p>
+  </div>
+</body>
+</html>
